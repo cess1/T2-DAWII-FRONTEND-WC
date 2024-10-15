@@ -19,22 +19,4 @@ public class RestTemplateConfig {
                 .build();
     }
 
-    @Bean
-    public RestTemplate restTemplateFinanzas(RestTemplateBuilder builder) {
-        return builder
-                .rootUri("http://localhost:8081/finanzas")
-                .setConnectTimeout(Duration.ofSeconds(10)) // timeout de establecimiento de conexion
-                .setReadTimeout(Duration.ofSeconds(10)) // timeout de lectura de la respuesta
-                .build();
-    }
-
-    @Bean
-    public RestTemplate restTemplateReportes(RestTemplateBuilder builder) {
-        return builder
-                .rootUri("http://localhost:8081/reportes")
-                .setConnectTimeout(Duration.ofSeconds(10)) // timeout de establecimiento de conexion
-                .setReadTimeout(Duration.ofSeconds(10)) // timeout de lectura de la respuesta
-                .build();
-    }
-
 }
